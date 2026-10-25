@@ -1,0 +1,11 @@
+# never commit credentials or run state
+greenops-exo*.json
+greenops-*.env
+*.env
+.env
+credentials*.json
+__pycache__/
+*.pyc
+.venv/
+runs/
+/tmp/

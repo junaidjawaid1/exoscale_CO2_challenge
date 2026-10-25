@@ -1,0 +1,11 @@
+=== STANDARD scenarios (14), 720x, outages; paired vs v3.3 ===
+  v3.3               diff      +0 ±0    wins  0/14 all-delivered  7/14 carbon  14.81 err 0
+  + pausable setup   diff     +31 ±14   wins  9/14 all-delivered  7/14 carbon  14.68 err 0
+  + joint GPU        diff     -14 ±15   wins  6/14 all-delivered  7/14 carbon  14.91 err 0
+  v3.4 = both        diff     +44 ±12   wins 10/14 all-delivered  7/14 carbon  14.58 err 0
+=== BROAD scenarios (16), 720x, outages; paired vs v3.3 ===
+  v3.3               diff      +0 ±0    wins  0/16 all-delivered 11/16 carbon  11.56 err 0
+  + pausable setup   diff    -298 ±316  wins  7/16 all-delivered 10/16 carbon  11.86 err 0
+  + joint GPU        diff     +61 ±46   wins 12/16 all-delivered 11/16 carbon  11.71 err 0
+  v3.4 = both        diff    -639 ±430  wins  7/16 all-delivered  9/16 carbon  11.81 err 0
+exit=0

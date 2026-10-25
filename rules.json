@@ -1,0 +1,32 @@
+{
+  "cohort": "greenops-score-v2:baa012c94fb9a9626337151649bd2987fdca585b7230cf1bca03ff0d120b762f:48e6c674e94bad8ba49b2d28617b4cee600dd7571f3547fd1b99e34f60bf19f5",
+  "enabled": true,
+  "rules": {
+    "impact_basis": "electricity_usage",
+    "version": "greenops-score-v2",
+    "hash": "48e6c674e94bad8ba49b2d28617b4cee600dd7571f3547fd1b99e34f60bf19f5",
+    "reference_energy_kwh": {
+      "w-01-dach-research": "26.400",
+      "w-02-ch-reporting": "25.344",
+      "w-03-med-analysis": "27.456",
+      "w-04-dach-batch": "26.928",
+      "w-05-eu-render": "23.232",
+      "w-06-large-etl": "24.816",
+      "w-07-eu-training": "21.120",
+      "w-08-ch-imaging": "9.240",
+      "w-09-eu-large-model": "28.380",
+      "w-10-eu-visual": "10.488",
+      "w-11-dach-simulation": "24.816",
+      "w-12-late-delivery": "20.064",
+      "w-13-regional-index": "24.288",
+      "w-14-bulk-render": "24.816",
+      "w-15-heavy-archive": "24.288"
+    },
+    "base_points": 20000,
+    "completion_bonus": 5000,
+    "reference_gco2e_per_kwh": 200,
+    "local_weight": "3/4",
+    "shared_weight": "1/4"
+  },
+  "scenario_id": "pack-40218962a6"
+}

@@ -1,0 +1,9 @@
+=== STANDARD scenarios (14), 720x, outages; paired vs v3.3 ===
+  v3.3               diff      +0 ±0    wins  0/14 all-delivered  7/14 carbon  14.82 err 0
+  + efficient tie-break diff     +11 ±21   wins  6/14 all-delivered  7/14 carbon  14.89 err 0
+  v3.4 + efficient   diff     +19 ±22   wins  7/14 all-delivered  7/14 carbon  14.76 err 0
+=== BROAD scenarios (16), 720x, outages; paired vs v3.3 ===
+  v3.3               diff      +0 ±0    wins  0/16 all-delivered 11/16 carbon  11.67 err 0
+  + efficient tie-break diff      -4 ±14   wins  9/16 all-delivered 11/16 carbon  11.63 err 0
+  v3.4 + efficient   diff     +13 ±35   wins  5/16 all-delivered 11/16 carbon  11.61 err 0
+exit=0

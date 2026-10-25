@@ -1,0 +1,1205 @@
+{
+  "scenario_id": "pack-40218962a6",
+  "provenance": "FICTIONAL production challenge: sponsor-selected v5 representative-import electricity; historical-derived synthetic actuals, smooth uncertain forecasts, one-hop imports (not recursive flow tracing). Existing 15 workloads, datacenter PUE, quotas and fictional France overlay retained from archived challenge pack; workload v5 sets CPU work to 14600 total vCPU-hours for scheduling slack (w-01 stays at 1000); GPU work and other workload parameters are unchanged.; owner-supplied averaged non-usage LCA rates, explicitly estimated effective IT power, time-varying electricity and challenge PUE applied once",
+  "zones": [
+    {
+      "name": "Vienna 1",
+      "location": {
+        "city": "Vienna",
+        "latitude": 48.21,
+        "longitude": 16.37,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "at-vie-1",
+      "country": "AT",
+      "electricity_area": "AT",
+      "eu_member": true,
+      "pue": "1.28",
+      "fictional": false
+    },
+    {
+      "name": "Vienna 2",
+      "location": {
+        "city": "Vienna",
+        "latitude": 48.21,
+        "longitude": 16.37,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "at-vie-2",
+      "country": "AT",
+      "electricity_area": "AT",
+      "eu_member": true,
+      "pue": "1.23",
+      "fictional": false
+    },
+    {
+      "name": "Sofia",
+      "location": {
+        "city": "Sofia",
+        "latitude": 42.7,
+        "longitude": 23.32,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "bg-sof-1",
+      "country": "BG",
+      "electricity_area": "BG",
+      "eu_member": true,
+      "pue": "1.47",
+      "fictional": false
+    },
+    {
+      "name": "Zurich",
+      "location": {
+        "city": "Zurich",
+        "latitude": 47.38,
+        "longitude": 8.54,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "ch-dk-2",
+      "country": "CH",
+      "electricity_area": "CH",
+      "eu_member": false,
+      "pue": "1.29",
+      "fictional": false
+    },
+    {
+      "name": "Geneva",
+      "location": {
+        "city": "Geneva",
+        "latitude": 46.2,
+        "longitude": 6.14,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "ch-gva-2",
+      "country": "CH",
+      "electricity_area": "CH",
+      "eu_member": false,
+      "pue": "1.35",
+      "fictional": false
+    },
+    {
+      "name": "Frankfurt",
+      "location": {
+        "city": "Frankfurt",
+        "latitude": 50.11,
+        "longitude": 8.68,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "de-fra-1",
+      "country": "DE",
+      "electricity_area": "DE",
+      "eu_member": true,
+      "pue": "1.20",
+      "fictional": false
+    },
+    {
+      "name": "Munich",
+      "location": {
+        "city": "Munich",
+        "latitude": 48.14,
+        "longitude": 11.58,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "de-muc-1",
+      "country": "DE",
+      "electricity_area": "DE",
+      "eu_member": true,
+      "pue": "1.40",
+      "fictional": false
+    },
+    {
+      "name": "Zagreb",
+      "location": {
+        "city": "Zagreb",
+        "latitude": 45.81,
+        "longitude": 15.98,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "hr-zag-1",
+      "country": "HR",
+      "electricity_area": "HR",
+      "eu_member": true,
+      "pue": "1.38",
+      "fictional": false
+    },
+    {
+      "name": "Madrid",
+      "location": {
+        "city": "Madrid",
+        "latitude": 40.42,
+        "longitude": -3.7,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "es-mad-1",
+      "country": "ES",
+      "electricity_area": "ES",
+      "eu_member": true,
+      "pue": "1.40",
+      "fictional": true
+    },
+    {
+      "name": "Milan",
+      "location": {
+        "city": "Milan",
+        "latitude": 45.46,
+        "longitude": 9.19,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "it-mil-1",
+      "country": "IT",
+      "electricity_area": "IT",
+      "eu_member": true,
+      "pue": "1.22",
+      "fictional": true
+    },
+    {
+      "name": "Paris",
+      "location": {
+        "city": "Paris",
+        "latitude": 48.86,
+        "longitude": 2.35,
+        "precision": "city"
+      },
+      "pue_provenance": "fictional_game_value",
+      "slug": "fr-par-1",
+      "country": "FR",
+      "electricity_area": "FR",
+      "eu_member": true,
+      "pue": "1.52",
+      "fictional": true
+    }
+  ],
+  "profiles": [
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.005851375000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:cpu.extra-large",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000001",
+      "family": "cpu",
+      "size": "extra-large",
+      "cpu_cores": 8,
+      "gpu_count": 0,
+      "memory_gib": 16,
+      "active_watts": "24.679444",
+      "idle_watts": "4.935889",
+      "stopped_watts": "0",
+      "throughput": "8",
+      "work_unit": "vcpu_hour",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-1",
+        "at-vie-2",
+        "bg-sof-1",
+        "ch-dk-2",
+        "ch-gva-2",
+        "de-fra-1",
+        "de-muc-1",
+        "hr-zag-1",
+        "es-mad-1",
+        "it-mil-1",
+        "fr-par-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.007921000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:cpu.huge",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000002",
+      "family": "cpu",
+      "size": "huge",
+      "cpu_cores": 16,
+      "gpu_count": 0,
+      "memory_gib": 32,
+      "active_watts": "47.345184",
+      "idle_watts": "9.469037",
+      "stopped_watts": "0",
+      "throughput": "16",
+      "work_unit": "vcpu_hour",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-1",
+        "at-vie-2",
+        "bg-sof-1",
+        "ch-dk-2",
+        "ch-gva-2",
+        "de-fra-1",
+        "de-muc-1",
+        "hr-zag-1",
+        "es-mad-1",
+        "it-mil-1",
+        "fr-par-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.012060750000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:cpu.mega",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000003",
+      "family": "cpu",
+      "size": "mega",
+      "cpu_cores": 32,
+      "gpu_count": 0,
+      "memory_gib": 64,
+      "active_watts": "92.675836",
+      "idle_watts": "18.535167",
+      "stopped_watts": "0",
+      "throughput": "32",
+      "work_unit": "vcpu_hour",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-1",
+        "at-vie-2",
+        "bg-sof-1",
+        "ch-dk-2",
+        "ch-gva-2",
+        "de-fra-1",
+        "de-muc-1",
+        "hr-zag-1",
+        "es-mad-1",
+        "it-mil-1",
+        "fr-par-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.019195375000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:cpu.titan",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000004",
+      "family": "cpu",
+      "size": "titan",
+      "cpu_cores": 40,
+      "gpu_count": 0,
+      "memory_gib": 128,
+      "active_watts": "132.607724",
+      "idle_watts": "26.521545",
+      "stopped_watts": "0",
+      "throughput": "40",
+      "work_unit": "vcpu_hour",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-1",
+        "at-vie-2",
+        "bg-sof-1",
+        "ch-dk-2",
+        "ch-gva-2",
+        "de-fra-1",
+        "de-muc-1",
+        "hr-zag-1",
+        "es-mad-1",
+        "it-mil-1",
+        "fr-par-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.019059000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu2.small",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA V100",
+      "gpu_memory_gib": 16,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000005",
+      "family": "gpu2",
+      "size": "small",
+      "cpu_cores": 12,
+      "gpu_count": 1,
+      "memory_gib": 56,
+      "active_watts": "175.370387",
+      "idle_watts": "35.074077",
+      "stopped_watts": "0",
+      "throughput": "80",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.034415000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu2.medium",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA V100",
+      "gpu_memory_gib": 16,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000006",
+      "family": "gpu2",
+      "size": "medium",
+      "cpu_cores": 16,
+      "gpu_count": 2,
+      "memory_gib": 90,
+      "active_watts": "323.790792",
+      "idle_watts": "64.758158",
+      "stopped_watts": "0",
+      "throughput": "160",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.070465000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu2.huge",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA V100",
+      "gpu_memory_gib": 16,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000007",
+      "family": "gpu2",
+      "size": "huge",
+      "cpu_cores": 48,
+      "gpu_count": 4,
+      "memory_gib": 225,
+      "active_watts": "696.451658",
+      "idle_watts": "139.290332",
+      "stopped_watts": "0",
+      "throughput": "320",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.014171000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu3.small",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA A40",
+      "gpu_memory_gib": 48,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000008",
+      "family": "gpu3",
+      "size": "small",
+      "cpu_cores": 12,
+      "gpu_count": 1,
+      "memory_gib": 56,
+      "active_watts": "110.511949",
+      "idle_watts": "22.102390",
+      "stopped_watts": "0",
+      "throughput": "200",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "de-fra-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.026987000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu3.medium",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA A40",
+      "gpu_memory_gib": 48,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000009",
+      "family": "gpu3",
+      "size": "medium",
+      "cpu_cores": 24,
+      "gpu_count": 2,
+      "memory_gib": 120,
+      "active_watts": "222.365223",
+      "idle_watts": "44.473045",
+      "stopped_watts": "0",
+      "throughput": "400",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "de-fra-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.049821000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu3.large",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA A40",
+      "gpu_memory_gib": 48,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000010",
+      "family": "gpu3",
+      "size": "large",
+      "cpu_cores": 48,
+      "gpu_count": 4,
+      "memory_gib": 224,
+      "active_watts": "437.058408",
+      "idle_watts": "87.411682",
+      "stopped_watts": "0",
+      "throughput": "800",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "de-fra-1"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.007211000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpua30.small",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA A30",
+      "gpu_memory_gib": 24,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000011",
+      "family": "gpua30",
+      "size": "small",
+      "cpu_cores": 12,
+      "gpu_count": 1,
+      "memory_gib": 56,
+      "active_watts": "51.424258",
+      "idle_watts": "10.284852",
+      "stopped_watts": "0",
+      "throughput": "160",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "ch-gva-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.010530000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpua30.medium",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA A30",
+      "gpu_memory_gib": 24,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000012",
+      "family": "gpua30",
+      "size": "medium",
+      "cpu_cores": 16,
+      "gpu_count": 2,
+      "memory_gib": 90,
+      "active_watts": "75.749241",
+      "idle_watts": "15.149848",
+      "stopped_watts": "0",
+      "throughput": "320",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "ch-gva-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.023989000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpua30.huge",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA A30",
+      "gpu_memory_gib": 24,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000013",
+      "family": "gpua30",
+      "size": "huge",
+      "cpu_cores": 48,
+      "gpu_count": 4,
+      "memory_gib": 225,
+      "active_watts": "201.746441",
+      "idle_watts": "40.349288",
+      "stopped_watts": "0",
+      "throughput": "640",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "ch-gva-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.018159000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpua5000.small",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX A5000",
+      "gpu_memory_gib": 24,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000014",
+      "family": "gpua5000",
+      "size": "small",
+      "cpu_cores": 12,
+      "gpu_count": 1,
+      "memory_gib": 56,
+      "active_watts": "172.373687",
+      "idle_watts": "34.474737",
+      "stopped_watts": "0",
+      "throughput": "120",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.032933000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpua5000.medium",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX A5000",
+      "gpu_memory_gib": 24,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000015",
+      "family": "gpua5000",
+      "size": "medium",
+      "cpu_cores": 24,
+      "gpu_count": 2,
+      "memory_gib": 112,
+      "active_watts": "342.252636",
+      "idle_watts": "68.450527",
+      "stopped_watts": "0",
+      "throughput": "240",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.062483000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpua5000.large",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX A5000",
+      "gpu_memory_gib": 24,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000016",
+      "family": "gpua5000",
+      "size": "large",
+      "cpu_cores": 48,
+      "gpu_count": 4,
+      "memory_gib": 224,
+      "active_watts": "682.005028",
+      "idle_watts": "136.401006",
+      "stopped_watts": "0",
+      "throughput": "480",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.013528000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu3080ti.small",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX 3080 Ti",
+      "gpu_memory_gib": 12,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000017",
+      "family": "gpu3080ti",
+      "size": "small",
+      "cpu_cores": 12,
+      "gpu_count": 1,
+      "memory_gib": 56,
+      "active_watts": "109.371930",
+      "idle_watts": "21.874386",
+      "stopped_watts": "0",
+      "throughput": "100",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.023673000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu3080ti.medium",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX 3080 Ti",
+      "gpu_memory_gib": 12,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000018",
+      "family": "gpu3080ti",
+      "size": "medium",
+      "cpu_cores": 24,
+      "gpu_count": 2,
+      "memory_gib": 112,
+      "active_watts": "216.243616",
+      "idle_watts": "43.248723",
+      "stopped_watts": "0",
+      "throughput": "200",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.043963000000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpu3080ti.large",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX 3080 Ti",
+      "gpu_memory_gib": 12,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000019",
+      "family": "gpu3080ti",
+      "size": "large",
+      "cpu_cores": 48,
+      "gpu_count": 4,
+      "memory_gib": 224,
+      "active_watts": "429.986988",
+      "idle_watts": "85.997398",
+      "stopped_watts": "0",
+      "throughput": "400",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "at-vie-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.033476750000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpurtx6000pro.small",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX PRO 6000",
+      "gpu_memory_gib": 96,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000020",
+      "family": "gpurtx6000pro",
+      "size": "small",
+      "cpu_cores": 36,
+      "gpu_count": 1,
+      "memory_gib": 120,
+      "active_watts": "351.837676",
+      "idle_watts": "70.367535",
+      "stopped_watts": "0",
+      "throughput": "800",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "de-fra-1",
+        "hr-zag-1",
+        "ch-dk-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.063987750000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpurtx6000pro.medium",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX PRO 6000",
+      "gpu_memory_gib": 96,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000021",
+      "family": "gpurtx6000pro",
+      "size": "medium",
+      "cpu_cores": 72,
+      "gpu_count": 2,
+      "memory_gib": 240,
+      "active_watts": "701.558603",
+      "idle_watts": "140.311721",
+      "stopped_watts": "0",
+      "throughput": "1600",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "de-fra-1",
+        "hr-zag-1",
+        "ch-dk-2"
+      ]
+    },
+    {
+      "power_basis": "it_before_pue",
+      "lifecycle_kg_per_hour": "0.125010750000",
+      "lifecycle_source": "exoscale-lca-estimates-v1:gpurtx6000pro.large",
+      "power_provenance": "estimated_effective_it_before_pue:relative_usage_proxy_v1",
+      "gpu_model": "NVIDIA RTX PRO 6000",
+      "gpu_memory_gib": 96,
+      "specification_provenance": "Source-matched hardware; game throughput and memory units; power estimated from LCA usage proxy (see power_provenance).",
+      "id": "20000000-0000-4000-8000-000000000022",
+      "family": "gpurtx6000pro",
+      "size": "large",
+      "cpu_cores": 144,
+      "gpu_count": 4,
+      "memory_gib": 480,
+      "active_watts": "1401.008924",
+      "idle_watts": "280.201785",
+      "stopped_watts": "0",
+      "throughput": "3200",
+      "work_unit": "tflop",
+      "boot_seconds": 120,
+      "zones": [
+        "de-fra-1",
+        "hr-zag-1",
+        "ch-dk-2"
+      ]
+    }
+  ],
+  "workloads": [
+    {
+      "allowed_countries": [
+        "DE",
+        "AT",
+        "CH"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-01-dach-research",
+      "title": "DACH serial scientific model",
+      "kind": "cpu",
+      "required_work": "1000",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T04:00:00Z",
+      "deadline_at": "2025-10-04T12:00:00Z",
+      "residency": "ANYWHERE",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 7200,
+      "output_seconds": 1800,
+      "checkpoint_seconds": 28800,
+      "restart_from_zero": true
+    },
+    {
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-02-ch-reporting",
+      "title": "Swiss regulated risk calculation",
+      "kind": "cpu",
+      "required_work": "1280",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T05:00:00Z",
+      "deadline_at": "2025-10-04T03:00:00Z",
+      "residency": "CH",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 3600,
+      "output_seconds": 3600,
+      "checkpoint_seconds": 14400,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "ES",
+        "IT"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-03-med-analysis",
+      "title": "Mediterranean analytics",
+      "kind": "cpu",
+      "required_work": "1600",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T14:00:00Z",
+      "deadline_at": "2025-10-04T18:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 3600,
+      "output_seconds": 1800,
+      "checkpoint_seconds": 7200,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "DE",
+        "AT",
+        "CH"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-04-dach-batch",
+      "title": "Portable DACH batch",
+      "kind": "cpu",
+      "required_work": "1440",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T12:00:00Z",
+      "deadline_at": "2025-10-04T16:00:00Z",
+      "residency": "ANYWHERE",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 300,
+      "output_seconds": 900,
+      "checkpoint_seconds": 900,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000001",
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-05-eu-render",
+      "title": "Parallel European rendering",
+      "kind": "cpu",
+      "required_work": "1440",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T18:00:00Z",
+      "deadline_at": "2025-10-04T22:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 10,
+      "sync_overhead": "0.06",
+      "input_seconds": 900,
+      "output_seconds": 1800,
+      "checkpoint_seconds": 1800,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "DE",
+        "IT",
+        "HR"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-06-large-etl",
+      "title": "Large-input three-country ETL",
+      "kind": "cpu",
+      "required_work": "1520",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T19:00:00Z",
+      "deadline_at": "2025-10-04T21:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 2,
+      "sync_overhead": "0.08",
+      "input_seconds": 7200,
+      "output_seconds": 3600,
+      "checkpoint_seconds": 28800,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "DE",
+        "HR"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "minimum_gpu_memory_gib": 48,
+      "id": "w-07-eu-training",
+      "title": "Cross-border GPU fine-tuning",
+      "kind": "gpu",
+      "required_work": "92160000",
+      "work_unit": "tflop",
+      "release_at": "2025-09-30T13:00:00Z",
+      "deadline_at": "2025-10-03T11:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "gpu3",
+        "gpurtx6000pro"
+      ],
+      "max_workers": 2,
+      "sync_overhead": "0.08",
+      "input_seconds": 7200,
+      "output_seconds": 3600,
+      "checkpoint_seconds": 14400,
+      "restart_from_zero": false
+    },
+    {
+      "forbidden_countries": [
+        "FR"
+      ],
+      "minimum_gpu_memory_gib": 24,
+      "id": "w-08-ch-imaging",
+      "title": "Swiss medical GPU imaging",
+      "kind": "gpu",
+      "required_work": "20160000",
+      "work_unit": "tflop",
+      "release_at": "2025-09-30T05:00:00Z",
+      "deadline_at": "2025-10-02T21:00:00Z",
+      "residency": "CH",
+      "allowed_families": [
+        "gpua30"
+      ],
+      "max_workers": 2,
+      "sync_overhead": "0.05",
+      "input_seconds": 3600,
+      "output_seconds": 1800,
+      "checkpoint_seconds": 3600,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "DE",
+        "HR"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "minimum_gpu_memory_gib": 96,
+      "id": "w-09-eu-large-model",
+      "title": "Cross-border large-memory GPU model",
+      "kind": "gpu",
+      "required_work": "123840000",
+      "work_unit": "tflop",
+      "release_at": "2025-10-01T07:00:00Z",
+      "deadline_at": "2025-10-04T01:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "gpurtx6000pro"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 7200,
+      "output_seconds": 3600,
+      "checkpoint_seconds": 28800,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "AT",
+        "DE"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "minimum_gpu_memory_gib": 12,
+      "id": "w-10-eu-visual",
+      "title": "Cross-border GPU visualization",
+      "kind": "gpu",
+      "required_work": "16416000",
+      "work_unit": "tflop",
+      "release_at": "2025-10-01T23:00:00Z",
+      "deadline_at": "2025-10-04T11:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "gpu2",
+        "gpu3",
+        "gpua5000",
+        "gpu3080ti"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 3600,
+      "output_seconds": 1800,
+      "checkpoint_seconds": 7200,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "DE",
+        "AT",
+        "CH"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-11-dach-simulation",
+      "title": "Restart-sensitive DACH simulation",
+      "kind": "cpu",
+      "required_work": "1120",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-10-01T08:00:00Z",
+      "deadline_at": "2025-10-05T00:00:00Z",
+      "residency": "ANYWHERE",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 3600,
+      "output_seconds": 1800,
+      "checkpoint_seconds": 0,
+      "restart_from_zero": true
+    },
+    {
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-12-late-delivery",
+      "title": "Late European output-heavy analysis",
+      "kind": "cpu",
+      "required_work": "960",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-10-01T21:00:00Z",
+      "deadline_at": "2025-10-05T00:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 1,
+      "sync_overhead": "0",
+      "input_seconds": 3600,
+      "output_seconds": 7200,
+      "checkpoint_seconds": 3600,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "DE",
+        "AT",
+        "HR"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000001",
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-13-regional-index",
+      "title": "Checkpointable regional search indexing",
+      "kind": "cpu",
+      "required_work": "1440",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T18:00:00Z",
+      "deadline_at": "2025-10-05T00:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 4,
+      "sync_overhead": "0.06",
+      "input_seconds": 0,
+      "output_seconds": 900,
+      "checkpoint_seconds": 1800,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "ES",
+        "IT",
+        "HR"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000001",
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-14-bulk-render",
+      "title": "Portable multi-worker media processing",
+      "kind": "cpu",
+      "required_work": "1520",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-09-30T20:00:00Z",
+      "deadline_at": "2025-10-05T00:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 6,
+      "sync_overhead": "0.05",
+      "input_seconds": 300,
+      "output_seconds": 1800,
+      "checkpoint_seconds": 900,
+      "restart_from_zero": false
+    },
+    {
+      "allowed_countries": [
+        "DE",
+        "AT",
+        "IT"
+      ],
+      "forbidden_countries": [
+        "FR"
+      ],
+      "allowed_profile_ids": [
+        "20000000-0000-4000-8000-000000000001",
+        "20000000-0000-4000-8000-000000000002",
+        "20000000-0000-4000-8000-000000000003",
+        "20000000-0000-4000-8000-000000000004"
+      ],
+      "id": "w-15-heavy-archive",
+      "title": "Large-input archival transformation",
+      "kind": "cpu",
+      "required_work": "1280",
+      "work_unit": "vcpu_hour",
+      "release_at": "2025-10-01T06:00:00Z",
+      "deadline_at": "2025-10-05T00:00:00Z",
+      "residency": "EU",
+      "allowed_families": [
+        "cpu"
+      ],
+      "max_workers": 4,
+      "sync_overhead": "0.08",
+      "input_seconds": 7200,
+      "output_seconds": 3600,
+      "checkpoint_seconds": 28800,
+      "restart_from_zero": false
+    }
+  ],
+  "max_vms": 20,
+  "max_vcpus": 320,
+  "gpu_family_quotas": {
+    "gpu2": 8,
+    "gpu3": 8,
+    "gpu3080ti": 8,
+    "gpua30": 8,
+    "gpua5000": 8,
+    "gpurtx6000pro": 4
+  },
+  "impact_model": "exoscale-lca-v1"
+}

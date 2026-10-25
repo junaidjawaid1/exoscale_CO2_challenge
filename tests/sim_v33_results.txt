@@ -1,0 +1,8 @@
+=== 14 unseen scenarios, 720x, status outages; fitted leaderboard score ===
+variant                        score  paired diff  wins  all-15 carbon kg errors
+v3.2 (main)                    18662       +0±0      0/14   7/14     14.99      0
+combo settings                 18688      +26±19    10/14   7/14     14.89      0
+combo + score weighting        18675      +13±26     8/14   7/14     14.94      0
+combo + score order            18692      +30±20    11/14   7/14     14.86      0
+v3.3 = combo + both            18701      +39±24     8/14   7/14     14.71      0
+exit=0
